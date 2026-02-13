@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Happy Maha Shivratri Wishes">
+    <meta property="og:description" content="Har Har Mahadev! Click to see your special greeting card.">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2023/02/10/16/09/lord-shiva-7781308_640.jpg">
+    <title>Maha Shivratri - Special Greeting</title>
+    
+    <style>
+        :root {
+            /* Lord Shiva Theme: Night Blue & Saffron */
+            --bg-dark: #0f2027; 
+            --bg-light: #2c5364;
+            --accent: #FF9933;     /* Saffron */
+            --gold: #FFD700;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+            --btn-dark: #34495e;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+            text-align: center;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Damru / Stars background pattern */
+        body::before {
+            content: "🕉️";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 20px;
+            opacity: 0.03;
+            color: #fff;
+            justify-content: space-around;
+            align-content: space-around;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255,255,255,0.02); /* Very subtle overlay */
+        }
+
+        /* Header Image container */
+        .image-container {
+            width: 100%;
+            border-bottom: 5px solid var(--accent);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 5s ease;
+        }
+        
+        /* Subtle Zoom Effect on Image */
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Mantra Header */
+        .mantra-text {
+            margin-top: 15px;
+            color: var(--gold);
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Main Greeting Text */
+        #display-text {
+            margin: 20px 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .highlight-name {
+            display: block;
+            margin-top: 10px;
+            font-size: 2.2rem;
+            color: var(--accent);
+            font-weight: 800;
+            text-transform: capitalize;
+            /* Glowing Text Effect */
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #ff4500; }
+            to { text-shadow: 0 0 20px #ffcc00; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card Box for Input */
+        .input-card {
+            width: 85%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        /* Trishul Icon Decoration */
+        .input-card::before {
+            content: "🔱";
+            font-size: 30px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 15px 0;
+            text-align: center;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent);
+            background-color: #fff8e1;
+        }
+
+        /* Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:active { transform: scale(0.95); }
+        
+        .btn-whatsapp { 
+            background: linear-gradient(45deg, #25D366, #128C7E); 
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+        
+        .btn-copy { 
+            background: var(--btn-dark); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            margin-top: 30px;
+            padding-bottom: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Custom Toast Alert */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 30px;
+            padding: 16px;
+            position: fixed;
+            z-index: 100;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER IMAGE (Matches shiv.png or loads backup) -->
+        <div class="image-container">
+            <img src="shiv.png" id="hero-img" alt="Lord Shiva" 
+                 onerror="this.src='https://cdn.pixabay.com/photo/2023/02/10/16/09/lord-shiva-7781308_640.jpg'">
+        </div>
+
+        <div class="mantra-text">🕉️ Om Namah Shivaya 🕉️</div>
+
+        <div id="display-text">
+            Maha Shivratri Ki Shubhkamnayein!<br>
+            <span style="font-size: 0.9rem; opacity: 0.8; font-weight: normal;">Write your name below to wish friends</span>
+        </div>
+
+        <div class="input-card">
+            <input type="text" id="nameInput" placeholder="Apna Naam Likhein..." oninput="updatePreview()" autocomplete="off">
+            
+            <button class="btn btn-whatsapp" onclick="shareOnWhatsapp()">
+                🚀 WhatsApp Par Bhejein
+            </button>
+            
+            <button class="btn btn-copy" onclick="copyLink()">
+                📋 Copy Link
+            </button>
+        </div>
+
+        <footer>
+            Har Har Mahadev 🙏<br>
+            Designed with ❤️ for You
+        </footer>
+
+    </div>
+
+    <div id="toast">Link Copied!</div>
+
+    <script>
+        // Main logic to handle URL names
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const sharedName = params.get('name');
+            
+            if (sharedName) {
+                // If viewing a friend's link
+                document.getElementById('display-text').innerHTML = 
+                    `Happy Maha Shivratri! <br> Wishing you:<br> 
+                    <span class="highlight-name">🔱 ${sanitize(sharedName)} 🔱</span>`;
+                
+                // Change input placeholder instructions
+                document.getElementById('nameInput').placeholder = "Create your own wish...";
+                document.title = `${sanitize(sharedName)} sent you a Wish!`;
+            }
+        };
+
+        // Live preview when typing
+        function updatePreview() {
+            const name = document.getElementById('nameInput').value;
+            const params = new URLSearchParams(window.location.search);
+            const sharedName = params.get('name');
+
+            if (name.trim() !== "") {
+                document.getElementById('display-text').innerHTML = 
+                    `Happy Maha Shivratri! <br> From:<br> 
+                    <span class="highlight-name">🔱 ${sanitize(name)} 🔱</span>`;
+            } else if (sharedName) {
+                // Revert to original wish if input cleared
+                document.getElementById('display-text').innerHTML = 
+                    `Happy Maha Shivratri! <br> Wishing you:<br> 
+                    <span class="highlight-name">🔱 ${sanitize(sharedName)} 🔱</span>`;
+            } else {
+                // Default state
+                document.getElementById('display-text').innerHTML = 
+                    `Maha Shivratri Ki Shubhkamnayein!<br>
+                    <span style="font-size: 0.9rem; opacity: 0.8; font-weight: normal;">Write your name below to wish friends</span>`;
+            }
+        }
+
+        function generateLink() {
+            const name = document.getElementById('nameInput').value.trim();
+            if(!name) {
+                showToast("⚠️ Pehle apna naam likhein!");
+                return null;
+            }
+            // Uses current URL path
+            var baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            return baseUrl + "?name=" + encodeURIComponent(name);
+        }
+
+        function shareOnWhatsapp() {
+            const link = generateLink();
+            if(!link) return;
+            const name = document.getElementById('nameInput').value;
+            const msg = `🔱 *${name}* ne aapke liye Maha Shivratri ki shubhkamnayein bheji hai.%0a%0a🕉️ *Om Namah Shivaya* 🕉️%0a%0a👇 Wishes dekhne ke liye click karein:%0a${encodeURIComponent(link)}`;
+            
+            window.open(`https://wa.me/?text=${msg}`, '_blank');
+        }
+
+        function copyLink() {
+            const link = generateLink();
+            if(!link) return;
+
+            // Copy logic
+            var tempInput = document.createElement("input");
+            tempInput.value = link;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            showToast("✅ Link Copy Ho Gaya!");
+        }
+
+        // Basic HTML Sanitization
+        function sanitize(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        // Toast Notification
+        function showToast(text) {
+            var x = document.getElementById("toast");
+            x.textContent = text;
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>
